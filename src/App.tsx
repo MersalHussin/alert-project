@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BellRing, FileWarning, HandFist, HelpCircle, HelpCircleIcon } from "lucide-react";
+import Alert from "./components/Alert";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Alert title="Something went wrong" headerIcon={<HandFist />}  type="defult"/>
+      <Alert title="Something went wrong" headerIcon={<HelpCircleIcon/>}  type="success"/>
+      <Alert title="Something went wrong" headerIcon={<FileWarning />}  type="warning"/>
+      <Alert title="Something went wrong" headerIcon={<HelpCircle  />}  type="info"/>
+      <Alert
+        title="Alert"
+        headerIcon={<BellRing />}
+        desc={
+          <>
+          "Lorem ipsum dolor sit, <a href="">amet</a>  consectetur adipisicing elit. Animi
+        assumenda sed molestias saepe ratione reprehenderit nulla accusamus
+        sequi repellat numquam?"
+          </>}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
