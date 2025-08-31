@@ -1,0 +1,1 @@
+export type alertType = "defult" | "success" | "warning" | "info" | "danger";

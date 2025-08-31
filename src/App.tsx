@@ -4,7 +4,9 @@ import Alert from "./components/Alert";
 function App() {
   return (
     <>
+      <div style={{margin:"100px auto", width:"700px"}}>
       <Alert title="Something went wrong" headerIcon={<HandFist />}  type="defult"/>
+        
       <Alert title="Something went wrong" headerIcon={<HelpCircleIcon/>}  type="success"/>
       <Alert title="Something went wrong" headerIcon={<FileWarning />}  type="warning"/>
       <Alert title="Something went wrong" headerIcon={<HelpCircle  />}  type="info"/>
@@ -18,6 +20,7 @@ function App() {
         sequi repellat numquam?"
           </>}
       />
+      </div>
     </>
   );
 }

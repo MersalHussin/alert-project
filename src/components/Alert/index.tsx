@@ -1,9 +1,10 @@
 import type { ReactNode } from "react";
 import "./index.scss";
 import {CircleX  } from 'lucide-react';
+import type { alertType } from "../../types";
 interface IProps {
   title: string;
-  type?: string;
+  type?: alertType
   headerIcon: ReactNode;
   desc?: ReactNode;
 }
